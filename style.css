@@ -1,0 +1,182 @@
+* {
+  /* Retirando configurações padrão do navegador.*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Cria uma Variavel que pode ser utilizada e modificado em escala*/
+:root {
+  --text-color: white;
+  --bg-url: url(assets/assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --suface-color-hover: rgba(255, 255, 255, 0.2);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/assets/moon-stars.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(assets/assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --suface-color-hover: rgba(0, 0, 0, 0.2);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/assets/sun.svg);
+}
+
+body {
+  /* Imagem de fundo*/
+  background-image: var(--bg-url);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+body * {
+  /* Fonte e cor padrão utilizado em todo o codigo*/
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  /* Alinhamento da caixa container*/
+  width: 360px;
+  margin: auto;
+  padding: 0 24px;
+  margin-top: 50px;
+}
+
+#profile {
+  /* configuração de alinhamento e margin para toda a caixa profile*/
+  padding: 24px;
+  text-align: center;
+}
+
+#profile img {
+  /* Tamanho da imagem do profile*/
+  width: 112px;
+}
+
+#profile p {
+  /* Alinhamento e tamanho do profile @wendellrijosc*/
+  margin-top: 8px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+#profile p a {
+  text-decoration: none;
+}
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+
+}
+
+  /* switch Botão de tema escuro e claro*/
+#switch button {
+width: 32px;
+height: 32px;
+background: white var(--switch-bg-url) no-repeat center;
+border: 0;
+border-radius: 50%;
+
+position: absolute;
+top: 50%;
+left: 0;
+z-index: 1;
+transform: translateY(-50%);
+}
+
+/* switch muda botão de tema da esquerda para a direita no modo ligth*/
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+display: block;
+width: 64px;
+height: 24px;
+background: var(--surface-color);
+border: 1px solid var(--stroke-color);
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+border-radius: 9999px;
+}
+
+
+ul {
+  /* Alinhamento e configurações dos botões externo*/
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px 0;
+}
+
+ul li a {
+  /* Alinhamento interno dos botões*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+
+  /* Fundo e borda dos botões*/
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+
+  /* Tira decoração do texto ou adiciona*/
+  text-decoration: none;
+  font-weight: 500;
+
+  /* tempo de transioção entre mudançãs do hover*/
+  transition: background 0.2s;
+}
+
+/* Hover muda quando passa o mouse em cima*/
+ul li a:hover {
+  background: var(--suface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+  /* Icones de redes sociais*/
+#social-links {
+  display: flex;
+  justify-content: center;
+
+  padding: 24px 0;
+  font-size: 24px;
+}
+
+  /* Icones de redes sociais*/
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+  /* Icones de redes sociais mudando quando passa o mouse*/
+#social-links a:hover {
+  background: var(--highlight-color);
+}
+
+  /* Mensagem de final da pagina*/
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+
