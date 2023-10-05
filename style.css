@@ -42,7 +42,9 @@ body * {
 
 #container {
   /* Alinhamento da caixa container*/
-  width: 360px;
+  width: 100%;
+  /* Pagina dimensionavel*/
+  max-width: 588px;
   margin: auto;
   padding: 0 24px;
   margin-top: 50px;
@@ -74,22 +76,21 @@ body * {
   position: relative;
   width: 64px;
   margin: 4px auto;
-
 }
 
-  /* switch Botão de tema escuro e claro*/
+/* switch Botão de tema escuro e claro*/
 #switch button {
-width: 32px;
-height: 32px;
-background: white var(--switch-bg-url) no-repeat center;
-border: 0;
-border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
 
-position: absolute;
-top: 50%;
-left: 0;
-z-index: 1;
-transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
 }
 
 /* switch muda botão de tema da esquerda para a direita no modo ligth*/
@@ -99,16 +100,15 @@ transform: translateY(-50%);
 }
 
 #switch span {
-display: block;
-width: 64px;
-height: 24px;
-background: var(--surface-color);
-border: 1px solid var(--stroke-color);
-backdrop-filter: blur(4px);
--webkit-backdrop-filter: blur(4px);
-border-radius: 9999px;
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
 }
-
 
 ul {
   /* Alinhamento e configurações dos botões externo*/
@@ -146,7 +146,7 @@ ul li a:hover {
   border: 1.5px solid var(--text-color);
 }
 
-  /* Icones de redes sociais*/
+/* Icones de redes sociais*/
 #social-links {
   display: flex;
   justify-content: center;
@@ -155,7 +155,7 @@ ul li a:hover {
   font-size: 24px;
 }
 
-  /* Icones de redes sociais*/
+/* Icones de redes sociais*/
 #social-links a {
   display: flex;
   align-items: center;
@@ -166,17 +166,15 @@ ul li a:hover {
   border-radius: 50%;
 }
 
-  /* Icones de redes sociais mudando quando passa o mouse*/
+/* Icones de redes sociais mudando quando passa o mouse*/
 #social-links a:hover {
   background: var(--highlight-color);
 }
 
-  /* Mensagem de final da pagina*/
+/* Mensagem de final da pagina*/
 footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
   text-decoration: none;
 }
-
-
