@@ -92,12 +92,20 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+  /* Animação da direita para a esquerda*/
+  animation: slide-back 0.4s;
+}
+
+/*Borda ao passar o mouse em cima*/
+#switch button:hover {
+outline: 8px solid var(--highlight-color);
 }
 
 /* switch muda botão de tema da esquerda para a direita no modo ligth*/
+/* forwards - Mantem as configurções finais da animação*/
+/* Animação da esquerda para direita*/
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.4s forwards;
 }
 
 #switch span {
@@ -180,7 +188,7 @@ footer {
   text-decoration: none;
 }
 
-/* media queries*/
+/* media queries - Responsividade - Após um tamanho ele muda algo*/
 @media (min-width: 700px) {
   :root {
     --bg-url: url(./assets/assets/bg-desktop.jpg);
@@ -189,5 +197,26 @@ footer {
   .light {
     --bg-url: url(./assets/assets/bg-desktop-light.jpg);
   }
+}
 
+/*Animações*/
+
+@keyframes slide-in {
+  /*From inicia a posição e left finaliza*/
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  /*From inicia a posição e left finaliza*/
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
