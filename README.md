@@ -32,7 +32,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-O LinkTree é um agregador de links para usar como cartão de visitas online, um projeto baseado nas aulas promovidas pela Rocketseat.
+O LinkTree é um agregador de links para usar como cartão de visitas online, um projeto criado através das aulas promovidas pela Rocketseat.
 
 - [Acesse o projeto finalizado, online](https://wendellrijo.github.io/LinkTree/)
 
