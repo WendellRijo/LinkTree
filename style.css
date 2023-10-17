@@ -45,7 +45,7 @@ body * {
   /* Alinhamento da caixa container*/
   width: 100%;
   /* Pagina dimensionavel*/
-  max-width: 588px;
+  max-width: 500px;
   margin: auto;
   padding: 0 24px;
   margin-top: 50px;
@@ -138,7 +138,7 @@ ul li a {
   /* Fundo e borda dos botões*/
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
-  border-radius: 8px;
+  border-radius: 50px;
   backdrop-filter: blur(4px);
 
   /* Tira decoração do texto ou adiciona*/
